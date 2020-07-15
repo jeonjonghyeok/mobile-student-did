@@ -1,2 +1,0 @@
-[2020-07-12T21:30:38.916] [INFO] PgService - SSL to Postgresql disabled
-[2020-07-12T21:30:38.916] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
