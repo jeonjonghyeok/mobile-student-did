@@ -2,8 +2,37 @@ import React from "react";
 import { Image, StyleSheet, Text, View, Alert } from "react-native";
 import anu from "./assets/icon.jpg";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import * as ImagePicker from "expo-image-picker";
 
 export default function App() {
+  let [selectedImage, setSelectedImage] = React.useState(null);
+
+  let openImagePickerAsync = async () => {
+    let permissionResult = await ImagePicker.requestCameraPermissionsAsync();
+
+    if (permissionResult.granted === false) {
+      alert("Permission to access camera roll is required!");
+      return;
+    }
+
+    let pickerResult = await ImagePicker.launchImageLibraryAsync();
+    if (pickerResult.cancelled === true) {
+      return;
+    }
+
+    setSelectedImage({ localUri: pickerResult.uri });
+  };
+
+  if (selectedImage !== null) {
+    return (
+      <View style={styles.container}>
+        <Image
+          source={{ uri: selectedImage.localUri }}
+          style={styles.thumbnail}
+        />
+      </View>
+    );
+  }
   return (
     <View style={styles.container}>
       <Image source={anu} style={styles.logo} />
@@ -12,20 +41,7 @@ export default function App() {
         below!
       </Text>
 
-      <TouchableOpacity
-        onPress={() =>
-          Alert.alert(
-            "항목을 선택해주세요",
-            "아래의 항목에서 선택해주세요",
-            [
-              { text: "OK", onPress: () => console.log("OK pressed!") },
-              { text: "Cancel", onPress: () => console.log("Cancel pressed!") },
-            ],
-            { cancelable: false }
-          )
-        }
-        style={styles.button}
-      >
+      <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
         <Text style={styles.buttonText}>선택해주세요</Text>
       </TouchableOpacity>
     </View>
@@ -51,4 +67,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   buttonText: { fontSize: 20, color: "#fff" },
+  thumbnail: {
+    width: 300,
+    height: 300,
+    resizeMode: "contain",
+  },
 });
