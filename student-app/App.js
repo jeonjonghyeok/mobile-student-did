@@ -1,8 +1,9 @@
 import React from "react";
 import { Image, StyleSheet, Text, View, Alert } from "react-native";
 import anu from "./assets/icon.jpg";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import * as ImagePicker from "expo-image-picker";
+import * as Sharing from "expo-sharing";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
@@ -23,6 +24,13 @@ export default function App() {
     setSelectedImage({ localUri: pickerResult.uri });
   };
 
+  let openShareDialogAsync = async () => {
+    if (!(await Sharing.isAvailableAsync())) {
+      alert(`uh oh, sharing isn't available on your platform`);
+      return;
+    }
+  };
+
   if (selectedImage !== null) {
     return (
       <View style={styles.container}>
@@ -30,6 +38,9 @@ export default function App() {
           source={{ uri: selectedImage.localUri }}
           style={styles.thumbnail}
         />
+        <TouchableOpacity onPress={openShareDialogAsync} style={styles.button}>
+          <Text style={styles.buttonText}>Share this Photo</Text>
+        </TouchableOpacity>
       </View>
     );
   }
