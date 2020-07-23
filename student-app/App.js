@@ -1,11 +1,14 @@
 import React from "react";
-import { Image, StyleSheet, Text, View, Alert } from "react-native";
+import { Image, StyleSheet, Text, View, Platform } from "react-native";
 import anu from "./assets/icon.jpg";
 import * as ImagePicker from "expo-image-picker";
 import * as Sharing from "expo-sharing";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import uploadToAnonymousFilesAsync from "anonymous-files";
 
 export default function App() {
+  var homeStatus = 1;
+
   let [selectedImage, setSelectedImage] = React.useState(null);
 
   let openImagePickerAsync = async () => {
@@ -20,20 +23,30 @@ export default function App() {
     if (pickerResult.cancelled === true) {
       return;
     }
-
-    setSelectedImage({ localUri: pickerResult.uri });
+    if (Platform.OS === "web") {
+      let remoteUri = await uploadToAnonymousFilesAsync(pickerResult.uri);
+      setSelectedImage({ localUri: pickerResult.uri, remoteUri });
+    } else {
+      setSelectedImage({ localUri: pickerResult.uri, remoteUri: null });
+    }
   };
 
   let openShareDialogAsync = async () => {
     if (!(await Sharing.isAvailableAsync())) {
-      alert(`uh oh, sharing isn't available on your platform`);
+      alert(
+        `uh oh, sharing isn't available for sharing at:${selectedImage.remoteUri}`
+      );
       return;
     }
+    Sharing.shareAsync(selectedImage.localUri);
   };
 
   if (selectedImage !== null) {
     return (
       <View style={styles.container}>
+        {/* <TouchableOpacity onPress={}>
+          <Text>home</Text>
+        </TouchableOpacity> */}
         <Image
           source={{ uri: selectedImage.localUri }}
           style={styles.thumbnail}
