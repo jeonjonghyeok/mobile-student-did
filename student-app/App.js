@@ -5,6 +5,8 @@ import * as ImagePicker from "expo-image-picker";
 import * as Sharing from "expo-sharing";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import uploadToAnonymousFilesAsync from "anonymous-files";
+// import { enableScreens } from " react-native-screens";
+// import { createNativeStackNavigator } from "react-native-screens/native-stack";
 
 export default function App() {
   var homeStatus = 1;
@@ -44,9 +46,6 @@ export default function App() {
   if (selectedImage !== null) {
     return (
       <View style={styles.container}>
-        {/* <TouchableOpacity onPress={}>
-          <Text>home</Text>
-        </TouchableOpacity> */}
         <Image
           source={{ uri: selectedImage.localUri }}
           style={styles.thumbnail}
