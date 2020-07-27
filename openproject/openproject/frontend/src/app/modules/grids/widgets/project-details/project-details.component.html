@@ -1,0 +1,26 @@
+<widget-header
+    [name]="widgetName"
+    [editable]="isEditable">
+
+  <widget-menu
+      [resource]="resource">
+  </widget-menu>
+</widget-header>
+
+<div class="grid--widget-content">
+  <edit-form *ngIf="(project$ | async) as project"
+             [resource]="project">
+    <div class="attributes-map">
+      <ng-container *ngFor="let cf of customFields">
+        <div class="attributes-map--key">
+          {{ cf.label }}
+        </div>
+        <div class="attributes-map--value">
+          <editable-attribute-field [resource]="project"
+                                    [fieldName]="cf.key">
+          </editable-attribute-field>
+        </div>
+      </ng-container>
+    </div>
+  </edit-form>
+</div>
