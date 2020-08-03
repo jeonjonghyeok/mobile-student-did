@@ -1,0 +1,25 @@
+
+홈 HomeScreen
+		name		component
+1.학생증 		Sid		SidScreen 
+QR코드 		Qr		QrScreen
+혜택		Benefit		 BenefitScreen
+
+2.개인정보	Profile	 	ProfileScreen
+정보제공내역 	Response		ResScreen
+정보요청내역 	Request		ReqScreen
+
+3.게시판		Board		BoardScreen
+
+4.부가기능	Addition		AddtionScreen
+
+5.고객센터	Service		  Service Screen
+
+
+
+
+<Button title="이전화면으로" onPress={() => navigation.goBack("Home")} />
+      <Button
+        title="초기화면으로 돌아가기"
+        onPress={() => navigation.popToTop()}
+      />

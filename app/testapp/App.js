@@ -1,13 +1,14 @@
+//TEST
+
 import * as React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, Alert } from "react-native";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { StatusBar } from "expo-status-bar";
 
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.box}>
-      <Text>Home Screen</Text>
+      <Text>Home화면</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate("Details")}
@@ -68,6 +69,13 @@ function App() {
           component={HomeScreen}
           options={{
             title: "My home",
+            headerRight: () => (
+              <Button
+                onPress={() => alert("This is a button!")}
+                title="Info"
+                color="#00cc00"
+              />
+            ),
             headerStyle: { backgroundColor: "purple" },
             headerTitleColor: "#fff",
             headerTitleStyle: {
@@ -76,6 +84,7 @@ function App() {
           }}
         />
         <Stack.Screen name="Details" component={DetailsScreen} />
+
         <Stack.Screen
           name="Profile"
           component={ProfileScreen}
