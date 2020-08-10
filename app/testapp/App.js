@@ -4,10 +4,12 @@ import * as React from "react";
 import { StyleSheet, Text, View, Button, Alert } from "react-native";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import QRCode from "react-native-qrcode-svg";
 
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.box}>
+      <QRCode logoSize={30} value="dsadasdasdas" />
       <Text>Home화면</Text>
       <Button
         title="Go to Details"
