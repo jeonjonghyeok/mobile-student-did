@@ -9,7 +9,7 @@ import QRCode from "react-native-qrcode-svg";
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.box}>
-      <QRCode logoSize={30} value="dsadasdasdas" />
+      <QRCode logoSize={30} value="http://www.naver.com" />
       <Text>Home화면</Text>
       <Button
         title="Go to Details"
