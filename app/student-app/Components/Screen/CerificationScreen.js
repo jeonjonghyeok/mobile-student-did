@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { Button } from "native-base";
 
-class CertficationScreen extends Component {
+export default class CertficationScreen extends Component {
+  static navigationOptions = ({ screenProps }) => ({
+    title: "인증화면",
+    headerLeft: (
+      <Button onPress={() => screenProps.openDraw()} title="메뉴" color="red" />
+    ),
+  });
   render() {
     const { navigation } = this.props;
     return (
@@ -11,7 +18,6 @@ class CertficationScreen extends Component {
     );
   }
 }
-export default CertficationScreen;
 
 const style = StyleSheet.create({
   container: {

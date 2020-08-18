@@ -8,18 +8,23 @@ import { NavigationContainer } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();
 
-export default function DrawerNavigator() {
+function MyDrawerNavigator() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen
-          name="CertficationScreen"
-          component={CertficationScreen}
-        />
-        <Drawer.Screen name="CompleteScreen" component={CompleteScreen} />
-        <Drawer.Screen name="MainScreen" component={MainScreen} />
-        <Drawer.Screen name="SigninScreen" component={SigninScreen} />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Screen name="CertficationScreen" component={CertficationScreen} />
+      <Drawer.Screen name="CompleteScreen" component={CompleteScreen} />
+      <Drawer.Screen name="MainScreen" component={MainScreen} />
+      <Drawer.Screen name="SigninScreen" component={SigninScreen} />
+    </Drawer.Navigator>
   );
+}
+
+export default class DrawerNavigator extends React.Component {
+  render() {
+    return (
+      <NavigationContainer>
+        <MyDrawerNavigator />
+      </NavigationContainer>
+    );
+  }
 }
