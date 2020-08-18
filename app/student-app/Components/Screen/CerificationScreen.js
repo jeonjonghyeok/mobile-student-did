@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 
 class CertficationScreen extends Component {
   render() {
+    const { navigation } = this.props;
     return (
       <View style={style.container}>
         <Text>MainScreen</Text>
