@@ -19,6 +19,7 @@ function MainNavigator() {
   return (
     <Stack.Navigator initialRouteName="SigninScreen">
       <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
+      <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
       <Stack.Screen name="CompleteScreen" component={CompleteScreen} />
       <Stack.Screen name="MainScreen" component={MainScreen} />
       <Stack.Screen name="SigninScreen" component={SigninScreen} />
