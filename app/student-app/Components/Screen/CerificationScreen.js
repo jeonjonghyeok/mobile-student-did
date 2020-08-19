@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Button } from "native-base";
+import QRCode from "react-native-qrcode-svg";
 
 export default class CertficationScreen extends Component {
   static navigationOptions = ({ screenProps }) => ({
@@ -13,7 +14,8 @@ export default class CertficationScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={style.container}>
-        <Text>MainScreen</Text>
+        <Text>QR코드를 인식시켜주세요</Text>
+        <QRCode logoSize={30} value="http://www.naver.com" />
       </View>
     );
   }

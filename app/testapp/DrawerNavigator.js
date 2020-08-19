@@ -1,8 +1,8 @@
 import * as React from "react";
-import SigninScreen from "../Screen/SigninScreen";
-import MainScreen from "../Screen/MainScreen";
-import CertficationScreen from "../Screen/CerificationScreen";
-import CompleteScreen from "../Screen/CompleteScreen";
+import SigninScreen from "../student-app/Components/Screen/SigninScreen";
+import MainScreen from "../student-app/Components/Screen/MainScreen";
+import CertficationScreen from "../student-app/Components/Screen/CerificationScreen";
+import CompleteScreen from "../student-app/Components/Screen/CompleteScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./StackNavigator";

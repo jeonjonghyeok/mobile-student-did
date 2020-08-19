@@ -7,7 +7,7 @@ class CompleteScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={style.container}>
-        <Text>MainScreen</Text>
+        <Text>회원가입 성공하셨습니다.</Text>
       </View>
     );
   }

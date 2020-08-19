@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
-import DrawerNavigator from "../Navigator/DrawerNavigator";
+
 import { TouchableHighlight } from "react-native-gesture-handler";
 
 class MainScreen extends Component {
