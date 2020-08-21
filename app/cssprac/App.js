@@ -5,11 +5,10 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.case1} />
-      <View style={styles.case2} />
-      <View style={styles.case3} />
-      <View style={styles.case4} />
-      <View style={styles.case5} />
+      <View style={styles.header}><Text>header</Text></View>
+      <View style={styles.title}><Text>title</Text></View>
+      <View style={styles.content}><Text>content</Text></View>
+      <View style={styles.footer}><Text>footer</Text></View>
     </View>
   );
 }
@@ -17,31 +16,34 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-  },
-  case1: {
-    width:100,
-    height:100,
-    backgroundColor: 'red',
-  },
-  case2 :{
-    width:50,
-    height:100,
-    backgroundColor: 'green',
-  },
-  case3 : {
-    width:150,
-    height: 70,
-    backgroundColor: 'blue',
-  },
-  case4: {
-    width:"100%",
-    height:70,
+    justifyContent: 'center',
     backgroundColor: 'black',
   },
-  case5: {
-    width:"50%",
-    height:"50%",
-    backgroundColor: "yellow",
-  }
+  header: {
+    width:'100%',
+    height:'9',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ff9a9a',
+  },
+  title :{
+    width:"100%",
+    height:"18%",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: 'green',
+  },
+  content : {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#d6ca1a',
+  },
+  footer: {
+    width:"100%",
+    height:"20%",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#1ad657',
+  },
 });
