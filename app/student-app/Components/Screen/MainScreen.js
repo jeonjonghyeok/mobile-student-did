@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
-
+import { View, Text, StyleSheet, Button, Image } from "react-native";
 import { TouchableHighlight } from "react-native-gesture-handler";
+import logo from "../../assets/ayu_icon.png";
 
 class MainScreen extends Component {
   static navigationOptions = ({ screenProps }) => ({
@@ -13,10 +13,8 @@ class MainScreen extends Component {
   render() {
     return (
       <View style={style.container}>
-        <Text>메인화면이 될부분</Text>
-        <TouchableHighlight
-          onPress={() => this.props.navigate("CertificationScreen")}
-        />
+        <Image style={style.tinyLogo} source={logo} />
+        <Text>안녕하세요 ~님</Text>
       </View>
     );
   }
@@ -29,4 +27,5 @@ const style = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  tinylog: {},
 });

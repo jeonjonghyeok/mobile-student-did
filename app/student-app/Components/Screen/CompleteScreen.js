@@ -7,7 +7,10 @@ class CompleteScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={style.container}>
-        <Text>회원가입 성공하셨습니다.</Text>
+        <Text>DID기반 모바일 학생증</Text>
+        <Text>생성 완료</Text>
+        <Text>DID: did:~~~</Text>
+        <Text>생성 날짜 2020.00.00</Text>
       </View>
     );
   }

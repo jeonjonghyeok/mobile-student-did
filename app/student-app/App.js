@@ -8,6 +8,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import MainNavigator from "./Components/Navigator/MainNavigator";
 
 export default class App extends React.Component {
+  state = {
+    isLoading: true,
+  };
   render() {
     return <MainNavigator />;
   }
