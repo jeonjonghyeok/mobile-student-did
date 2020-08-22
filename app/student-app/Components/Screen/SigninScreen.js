@@ -18,7 +18,7 @@ class SigninScreen extends Component {
         <View>
           <Text>서비스를 위해 로그인 해주세요</Text>
         </View>
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: "row", marginTop: 30 }}>
           <Text>ID</Text>
           <TextInput
             style={{ height: 40, width: 120, marginLeft: 50 }}

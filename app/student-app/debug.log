@@ -1,0 +1,5 @@
+[0822/112812.476:ERROR:process_reader_win.cc(127)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
+[0822/112812.479:ERROR:exception_snapshot_win.cc(99)] thread ID 18088 not found in process
+[0822/112812.479:ERROR:process_memory_win.cc(73)] ReadMemory at 0x48057fe940 of 16 bytes failed: ReadProcessMemory 또는 WriteProcessMemory의 일부 작업만을 마쳤습니다. (0x12B)
+[0822/112812.479:ERROR:exception_snapshot_win.cc(210)] EXCEPTION_POINTERS read failed
+[0822/112812.480:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 기존 프로세스에 액세스하려고 했습니다. (0xc000010a)
