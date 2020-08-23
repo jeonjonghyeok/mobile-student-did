@@ -5,6 +5,9 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import userimage from "../../assets/user_icon.png";
 import CertficationScreen from "../Screen/CerificationScreen";
 import CompleteScreen from "../Screen/CompleteScreen";
+import EmailScreen from "../Screen/EmailScreen";
+import PasswordScreen from "../Screen/PasswordScreen";
+import CreateScreen from "../Screen/CreateScreen";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
