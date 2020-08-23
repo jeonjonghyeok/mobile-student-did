@@ -22,10 +22,10 @@ import { ScrollView } from "react-native-gesture-handler";
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
-function Signin() {
+function First() {
   return (
     <Stack.Navigator
-      initialRouteName="SigninScreen"
+      initialRouteName="CertificationScreen"
       screenOptions={{
         headerStyle: {
           height: 55,
@@ -35,6 +35,7 @@ function Signin() {
           fontWeight: "bold",
           color: "white",
         },
+        headerTitleAlign: "center",
       }}
     >
       <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
@@ -101,6 +102,7 @@ function Main() {
           fontWeight: "bold",
           color: "white",
         },
+        headerLeft: {},
       }}
     >
       <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
@@ -136,10 +138,18 @@ function CustomDrawerContent(props) {
 function MyDrawerNavigator() {
   return (
     <Drawer.Navigator
-      initialRouteName={Signin}
+      initialRouteName={First}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
+      // edgeWidth={0}
     >
-      <Drawer.Screen name="로그인" component={Signin} />
+      {list.filter((v) => v.when === when}).map((v, idx) => (
+<Drawer.Screen key={idx} name={v.name} component={v.component}/>
+))}
+  <Drawer.Screen
+        options={{ drawerLabel: () => null }}
+        name="로그인"
+        component={First}
+      />
       <Drawer.Screen name="인증화면" component={Certfication} />
       <Drawer.Screen name="발급완료" component={Complete} />
       <Drawer.Screen name="메인화면" component={Main} />
