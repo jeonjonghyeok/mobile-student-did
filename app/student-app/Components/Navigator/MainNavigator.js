@@ -112,7 +112,7 @@ function Main() {
     </Stack.Navigator>
   );
 }
-function CustomDrawerContent(props) {
+function CustomDrawerContent({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ height: 150, backgroundColor: "White" }}>
@@ -128,14 +128,35 @@ function CustomDrawerContent(props) {
           </Text>
         </View>
       </View>
-      <DrawerContentScrollView {...props}>
-        <DrawerItemList {...props} />
-      </DrawerContentScrollView>
+      <ScrollView>
+        <DrawerItem
+          label="생성"
+          onPress={() => {
+            navigation.navigate("CertficationScreen");
+          }}
+        />
+        <DrawerItem
+          label="완료"
+          onPress={() => {
+            navigation.navigate("CompleteScreen");
+          }}
+        />
+        <DrawerItem
+          label="Close"
+          onPress={() => {
+            navigation.closeDrawer();
+          }}
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 function MyDrawerNavigator() {
+  //   drawerContent={(props): ReactElement => (
+  //     <CustomDrawerContent {...props} />
+  //   )}
+  // >
   return (
     <Drawer.Navigator
       initialRouteName={First}
