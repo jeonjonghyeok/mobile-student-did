@@ -25,7 +25,7 @@ const Stack = createStackNavigator();
 function First() {
   return (
     <Stack.Navigator
-      initialRouteName="CertificationScreen"
+      initialRouteName="SigninScreen"
       screenOptions={{
         headerStyle: {
           height: 55,

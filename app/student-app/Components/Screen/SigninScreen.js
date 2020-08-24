@@ -49,13 +49,7 @@ class SigninScreen extends Component {
           <View></View>
         </View>
 
-        <View style={{ flexDirection: "row", marginTop: 100 }}>
-          <Button
-            title="로그인"
-            onPress={() => navigation.navigate("MainScreen")}
-          />
-          <Button title="회원가입" />
-        </View>
+        
       </View>
     );
   }
