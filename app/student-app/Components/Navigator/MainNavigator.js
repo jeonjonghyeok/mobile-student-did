@@ -142,10 +142,10 @@ function MyDrawerNavigator() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       // edgeWidth={0}
     >
-      {list.filter((v) => v.when === when}).map((v, idx) => (
+      {/* {list.filter((v) => v.when === when}).map((v, idx) => (
 <Drawer.Screen key={idx} name={v.name} component={v.component}/>
-))}
-  <Drawer.Screen
+))} */}
+      <Drawer.Screen
         options={{ drawerLabel: () => null }}
         name="로그인"
         component={First}
