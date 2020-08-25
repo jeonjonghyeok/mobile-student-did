@@ -19,11 +19,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaView } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
-function First({ navigation }) {
+function First() {
   return (
     <Stack.Navigator
       initialRouteName="CertificationScreen"
@@ -171,6 +172,9 @@ function CustomDrawerContent({ navigation }) {
       </View>
       <ScrollView>
         <DrawerItem
+          icon={({ color, size }) => (
+            <Entypo name="home" size={24} color="gray" />
+          )}
           label="생성"
           onPress={() => {
             navigation.navigate("CertficationScreen");
