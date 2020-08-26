@@ -1,7 +1,7 @@
 import * as React from "react";
 import SigninScreen from "../Screen/SigninScreen";
 import MainScreen from "../Screen/MainScreen";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import userimage from "../../assets/user_icon.png";
 import CertficationScreen from "../Screen/CerificationScreen";
 import CompleteScreen from "../Screen/CompleteScreen";
@@ -18,6 +18,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaView } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -28,7 +30,7 @@ function First() {
       initialRouteName="SigninScreen"
       screenOptions={{
         headerStyle: {
-          height: 55,
+          height: 75,
           backgroundColor: "blue",
         },
         headerTitleStyle: {
@@ -36,6 +38,16 @@ function First() {
           color: "white",
         },
         headerTitleAlign: "center",
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+            <Ionicons
+              name="ios-menu"
+              size={24}
+              color="white"
+              style={{ marginLeft: 10 }}
+            />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
@@ -51,13 +63,23 @@ function Certfication() {
       initialRouteName="CertficationScreen"
       screenOptions={{
         headerStyle: {
-          height: 55,
+          height: 75,
           backgroundColor: "blue",
         },
         headerTitleStyle: {
           fontWeight: "bold",
           color: "white",
         },
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+            <Ionicons
+              name="ios-menu"
+              size={24}
+              color="white"
+              style={{ marginLeft: 10 }}
+            />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
@@ -73,13 +95,23 @@ function Complete() {
       initialRouteName="CompleteScreen"
       screenOptions={{
         headerStyle: {
-          height: 55,
+          height: 75,
           backgroundColor: "blue",
         },
         headerTitleStyle: {
           fontWeight: "bold",
           color: "white",
         },
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+            <Ionicons
+              name="ios-menu"
+              size={24}
+              color="white"
+              style={{ marginLeft: 10 }}
+            />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
@@ -95,7 +127,7 @@ function Main() {
       initialRouteName="MainScreen"
       screenOptions={{
         headerStyle: {
-          height: 55,
+          height: 75,
           backgroundColor: "blue",
         },
         headerTitleStyle: {
@@ -103,6 +135,16 @@ function Main() {
           color: "white",
         },
         headerLeft: {},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+            <Ionicons
+              name="ios-menu"
+              size={24}
+              color="white"
+              style={{ marginLeft: 10 }}
+            />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
@@ -112,7 +154,7 @@ function Main() {
     </Stack.Navigator>
   );
 }
-function CustomDrawerContent(props) {
+function CustomDrawerContent({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ height: 150, backgroundColor: "White" }}>
@@ -128,9 +170,29 @@ function CustomDrawerContent(props) {
           </Text>
         </View>
       </View>
-      <DrawerContentScrollView {...props}>
-        <DrawerItemList {...props} />
-      </DrawerContentScrollView>
+      <ScrollView>
+        <DrawerItem
+          icon={({ color, size }) => (
+            <Entypo name="home" size={24} color="gray" />
+          )}
+          label="생성"
+          onPress={() => {
+            navigation.navigate("CertficationScreen");
+          }}
+        />
+        <DrawerItem
+          label="완료"
+          onPress={() => {
+            navigation.navigate("CompleteScreen");
+          }}
+        />
+        <DrawerItem
+          label="Close"
+          onPress={() => {
+            navigation.closeDrawer();
+          }}
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -142,9 +204,6 @@ function MyDrawerNavigator() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       // edgeWidth={0}
     >
-      {/* {list.filter((v) => v.when === when}).map((v, idx) => (
-<Drawer.Screen key={idx} name={v.name} component={v.component}/>
-))} */}
       <Drawer.Screen
         options={{ drawerLabel: () => null }}
         name="로그인"

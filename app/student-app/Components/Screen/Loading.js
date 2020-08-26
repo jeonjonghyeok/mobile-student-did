@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, Text, View, StatusBar } from "react-native";
 
-export default function Loading() {
-  return (
-    <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <Text style={styles.text}>getting the fucking weather</Text>
-    </View>
-  );
+class Loading extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
+        <Text style={styles.text}>블록체인 학생증 시스템</Text>
+      </View>
+    );
+  }
 }
+export default Loading;
 
 const styles = StyleSheet.create({
   container: {
@@ -16,7 +19,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     paddingHorizontal: 30,
     paddingVertical: 100,
-    backgroundColor: "#FDF6AA",
+    backgroundColor: "white",
   },
   text: {
     color: "#2c2c2c",
