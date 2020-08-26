@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  TextInput,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+import { createPortal } from "react-dom";
 
 /* <input type="text" placeholder="ID" />
 <input type="text" placeholder="비밀번호" /> */
@@ -40,16 +49,26 @@ class SigninScreen extends Component {
         <View style={styles.footer}>
           <View style={style.container2}>
             <View style={style.dhls}>
-              <Text style={{ fontSize: 20 }}>새로만들기</Text>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("CreateScreen")}
+                style={{ backgroundColor: "blue" }}
+              >
+                <Text style={{ fontSize: "20", color: "white" }}>
+                  새로만들기
+                </Text>
+              </TouchableOpacity>
             </View>
             <View style={style.dhfms}>
-              <Text style={{ fontSize: 20 }}>가져오기</Text>
+              <TouchableOpacity
+                style={{ backgroundColor: "blue" }}
+                onPress={() => navigation.navigate("CreateScreen")}
+              >
+                <Text style={{ fontSize: "20", color: "white" }}>가져오기</Text>
+              </TouchableOpacity>
             </View>
           </View>
           <View></View>
         </View>
-
-        
       </View>
     );
   }

@@ -18,6 +18,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaView } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 
@@ -38,90 +39,71 @@ function First({ navigation }) {
           color: "white",
         },
         headerTitleAlign: "center",
-        headerLeft: () => (
-          <TouchableOpacity onPress={() => navigation.openDrawer()}>
-            <Ionicons
-              name="ios-menu"
-              size={24}
-              color="white"
-              style={{ marginLeft: 10 }}
-            />
-          </TouchableOpacity>
-        ),
       }}
     >
-      <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
-      <Stack.Screen name="CompleteScreen" component={CompleteScreen} />
-      <Stack.Screen name="MainScreen" component={MainScreen} />
-      <Stack.Screen name="SigninScreen" component={SigninScreen} />
+      <Stack.Screen
+        options={{ title: "회원가입" }}
+        name="SigninScreen"
+        component={SigninScreen}
+      />
+      <Stack.Screen
+        options={{ title: "새로 만들기" }}
+        name="CreateScreen"
+        component={CreateScreen}
+      />
+      <Stack.Screen
+        options={{ title: "이메일 인증" }}
+        name="EmailScreen"
+        component={EmailScreen}
+      />
+      <Stack.Screen
+        options={{ title: "모바일 학생증 생성완료" }}
+        name="CompleteScreen"
+        component={CompleteScreen}
+      />
+      <Stack.Screen
+        name="MainScreen"
+        options={{
+          title: "메인화면",
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <Ionicons
+                name="ios-menu"
+                size={24}
+                color="white"
+                style={{ marginLeft: 10 }}
+              />
+            </TouchableOpacity>
+          ),
+        }}
+        component={MainScreen}
+      />
+      <Stack.Screen
+        name="PasswordScreen"
+        options={{
+          title: "검증화면",
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <Ionicons
+                name="ios-menu"
+                size={24}
+                color="white"
+                style={{ marginLeft: 10 }}
+              />
+            </TouchableOpacity>
+          ),
+        }}
+        component={PasswordScreen}
+      />
+      <Stack.Screen
+        name="CertficationScreen"
+        options={{ title: "검증완료" }}
+        component={CertficationScreen}
+      />
     </Stack.Navigator>
   );
 }
-function Certfication({ navigation }) {
-  return (
-    <Stack.Navigator
-      initialRouteName="CertficationScreen"
-      screenOptions={{
-        headerStyle: {
-          height: 75,
-          backgroundColor: "blue",
-        },
-        headerTitleStyle: {
-          fontWeight: "bold",
-          color: "white",
-        },
-        headerLeft: () => (
-          <TouchableOpacity onPress={() => navigation.openDrawer()}>
-            <Ionicons
-              name="ios-menu"
-              size={24}
-              color="white"
-              style={{ marginLeft: 10 }}
-            />
-          </TouchableOpacity>
-        ),
-      }}
-    >
-      <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
-      <Stack.Screen name="CompleteScreen" component={CompleteScreen} />
-      <Stack.Screen name="MainScreen" component={MainScreen} />
-      <Stack.Screen name="SigninScreen" component={SigninScreen} />
-    </Stack.Navigator>
-  );
-}
-function Complete({ navigation }) {
-  return (
-    <Stack.Navigator
-      initialRouteName="CompleteScreen"
-      screenOptions={{
-        headerStyle: {
-          height: 75,
-          backgroundColor: "blue",
-        },
-        headerTitleStyle: {
-          fontWeight: "bold",
-          color: "white",
-        },
-        headerLeft: () => (
-          <TouchableOpacity onPress={() => navigation.openDrawer()}>
-            <Ionicons
-              name="ios-menu"
-              size={24}
-              color="white"
-              style={{ marginLeft: 10 }}
-            />
-          </TouchableOpacity>
-        ),
-      }}
-    >
-      <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
-      <Stack.Screen name="CompleteScreen" component={CompleteScreen} />
-      <Stack.Screen name="MainScreen" component={MainScreen} />
-      <Stack.Screen name="SigninScreen" component={SigninScreen} />
-    </Stack.Navigator>
-  );
-}
-function Main() {
+function MainStack({ navigation }) {
   return (
     <Stack.Navigator
       initialRouteName="MainScreen"
@@ -134,7 +116,6 @@ function Main() {
           fontWeight: "bold",
           color: "white",
         },
-        headerLeft: {},
         headerLeft: () => (
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Ionicons
@@ -147,10 +128,21 @@ function Main() {
         ),
       }}
     >
-      <Stack.Screen name="CertficationScreen" component={CertficationScreen} />
-      <Stack.Screen name="CompleteScreen" component={CompleteScreen} />
-      <Stack.Screen name="MainScreen" component={MainScreen} />
-      <Stack.Screen name="SigninScreen" component={SigninScreen} />
+      <Stack.Screen
+        name="MainScreen"
+        options={{ title: "메인화면" }}
+        component={MainScreen}
+      />
+      <Stack.Screen
+        name="PasswordScreen"
+        options={{ title: "검증화면" }}
+        component={PasswordScreen}
+      />
+      <Stack.Screen
+        name="CertficationScreen"
+        options={{ title: "검증완료" }}
+        component={CertficationScreen}
+      />
     </Stack.Navigator>
   );
 }
@@ -175,19 +167,25 @@ function CustomDrawerContent({ navigation }) {
           icon={({ color, size }) => (
             <Entypo name="home" size={24} color="gray" />
           )}
-          label="생성"
+          label="메인화면"
+          onPress={() => {
+            navigation.navigate("MainScreen");
+          }}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons name="human-male" size={24} color="gray" />
+          )}
+          label="검증하기"
           onPress={() => {
             navigation.navigate("CertficationScreen");
           }}
         />
         <DrawerItem
-          label="완료"
-          onPress={() => {
-            navigation.navigate("CompleteScreen");
-          }}
-        />
-        <DrawerItem
-          label="Close"
+          icon={({ color, size }) => (
+            <Ionicons name="ios-settings" size={24} color="gray" />
+          )}
+          label="설정"
           onPress={() => {
             navigation.closeDrawer();
           }}
@@ -209,9 +207,7 @@ function MyDrawerNavigator() {
         name="로그인"
         component={First}
       />
-      <Drawer.Screen name="인증화면" component={Certfication} />
-      <Drawer.Screen name="발급완료" component={Complete} />
-      <Drawer.Screen name="메인화면" component={Main} />
+      <Drawer.Screen name="인증화면" component={MainStack} />
     </Drawer.Navigator>
   );
 }
