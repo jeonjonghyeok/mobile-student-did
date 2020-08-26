@@ -4,15 +4,19 @@ import * as React from "react";
 import { StyleSheet, Text, View, Button, Alert } from "react-native";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import Loading from "./Components/Screen/Loading";
 import MainNavigator from "./Components/Navigator/MainNavigator";
 
 export default class App extends React.Component {
   state = {
     isLoading: true,
   };
+
   render() {
-    return <MainNavigator />;
+    setTimeout(() => this.setState({ isLoading: false }), 3000);
+    const { isLoading } = this.state;
+
+    return isLoading ? <Loading /> : <MainNavigator />;
   }
 }
 
