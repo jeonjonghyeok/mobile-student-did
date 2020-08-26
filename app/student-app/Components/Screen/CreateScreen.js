@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 // import UpperNavigator from "../Navigator/UpperNavigator";
 
 class CreateScreen extends Component {
@@ -11,6 +11,12 @@ class CreateScreen extends Component {
         <Text>생성 완료</Text>
         <Text style={{ fontSize: 30 }}>DID: did:~~~</Text>
         <Text>생성 날짜 2020.00.00</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("EmailScreen")}
+          style={{ backgroundColor: "blue" }}
+        >
+          <Text style={{ fontSize: "20", color: "white" }}>이메일 인증</Text>
+        </TouchableOpacity>
       </View>
     );
   }
