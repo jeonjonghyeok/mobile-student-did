@@ -559,7 +559,7 @@ const styles = StyleSheet.create({
   });
   */
 
-
+/*
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
 
@@ -663,9 +663,9 @@ const styles = StyleSheet.create({
 
 
   });
+*/
 
 
-/*
  import React, { Component } from "react";
  import { View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
  
@@ -796,4 +796,4 @@ const styles = StyleSheet.create({
      alignItems: "center",
    },
  });
- */
+ 
