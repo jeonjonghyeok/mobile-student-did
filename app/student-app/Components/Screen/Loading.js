@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
+import logo from "../../assets/ayu_icon.png";
 
 class Loading extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" />
+        <Image source={logo} style={{ marginLeft: 20 }} />
         <Text style={styles.text}>블록체인 학생증 시스템</Text>
       </View>
     );
@@ -19,10 +20,10 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     paddingHorizontal: 30,
     paddingVertical: 100,
-    backgroundColor: "white",
+    backgroundColor: "blue",
   },
   text: {
-    color: "#2c2c2c",
+    color: "white",
     fontSize: 30,
   },
 });

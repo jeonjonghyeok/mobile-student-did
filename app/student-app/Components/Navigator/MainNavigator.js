@@ -24,7 +24,7 @@ import { Entypo } from "@expo/vector-icons";
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
-function First() {
+function First({ navigation }) {
   return (
     <Stack.Navigator
       initialRouteName="SigninScreen"
@@ -57,7 +57,7 @@ function First() {
     </Stack.Navigator>
   );
 }
-function Certfication() {
+function Certfication({ navigation }) {
   return (
     <Stack.Navigator
       initialRouteName="CertficationScreen"
@@ -89,7 +89,7 @@ function Certfication() {
     </Stack.Navigator>
   );
 }
-function Complete() {
+function Complete({ navigation }) {
   return (
     <Stack.Navigator
       initialRouteName="CompleteScreen"
