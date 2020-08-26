@@ -13,7 +13,7 @@ export default class App extends React.Component {
   };
 
   render() {
-    setTimeout(() => this.setState({ isLoading: false }), 3000);
+    setTimeout(() => this.setState({ isLoading: false }), 1500);
     const { isLoading } = this.state;
 
     return isLoading ? <Loading /> : <MainNavigator />;
