@@ -400,7 +400,7 @@ const style = StyleSheet.create({
 */
 /*
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
+import {TouchableOpacity, View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
 
 // <input type="text" placeholder="ID" />
 // <input type="text" placeholder="비밀번호" /> 
@@ -422,11 +422,21 @@ class SigninScreen extends Component {
           <Text style={{fontSize:25}}>진행 부탁드립니다.</Text>
         </View>
         <View style={styles.content}>
-          <Text style={{fontSize:25}}>이메일 인증</Text>
+        <TouchableOpacity
+                style={{ borderRadius:10, width:"60%",height:"70%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                //onPress={() => navigation.navigate("CreateScreen")}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>이메일인증</Text>
+              </TouchableOpacity>
         </View>
         <View style={styles.footer}></View>
         <View style={styles.gkdnl}>
-        <Text style={{fontSize:25}}>다음</Text>
+        <TouchableOpacity
+                style={{ borderRadius:10, width:"90%",height:"65%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                //onPress={() => navigation.navigate("CreateScreen")}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>이메일인증</Text>
+              </TouchableOpacity>
         </View>
         
       </View>
@@ -468,7 +478,7 @@ const styles = StyleSheet.create({
   },
   gkdnl: {
     flex:1,
-    backgroundColor:"steelblue",
+    //backgroundColor:"steelblue",
     justifyContent: "center",
     alignItems: "center",
     
@@ -478,7 +488,7 @@ const styles = StyleSheet.create({
 
 });
 */
-/*
+
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
 
@@ -497,9 +507,9 @@ class SigninScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={{fontSize:25}}>DID를 발급 및 개인키를</Text>
-          <Text style={{fontSize:25}}>발급받기 위해 이메일 인증을</Text>
-          <Text style={{fontSize:25}}>진행 부탁드립니다.</Text>
+          <Text style={{fontSize:25}}>DID기반 모바일 학생증</Text>
+          <Text style={{fontSize:25}}>생성 완료</Text>
+          
         </View>
         <View style={styles.content}>
           <Text style={{fontSize:25}}>DID:did:~~~</Text>
@@ -557,7 +567,7 @@ const styles = StyleSheet.create({
 
 
   });
-  */
+  
 
 /*
 import React, { Component } from "react";
@@ -664,7 +674,7 @@ const styles = StyleSheet.create({
 
   });
 */
-
+/*
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, TextInput, Image, TouchableOpacity } from "react-native";
 
@@ -788,3 +798,4 @@ const styles = StyleSheet.create({
 
 
   });
+  */
