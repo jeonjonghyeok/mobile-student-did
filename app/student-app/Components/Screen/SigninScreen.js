@@ -25,7 +25,6 @@ class SigninScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={{ fontSize: "25" }}>회원가입</Text>
         </View>
         <View style={styles.dksshd}></View>
         <View style={styles.title}>
@@ -49,21 +48,19 @@ class SigninScreen extends Component {
         <View style={styles.footer}>
           <View style={style.container2}>
             <View style={style.dhls}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate("CreateScreen")}
-                style={{ backgroundColor: "blue" }}
+            <TouchableOpacity
+            onPress={() => navigation.navigate("CreateScreen")}
+            style={{ borderRadius:10, width:"80%",height:"40%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
               >
-                <Text style={{ fontSize: "20", color: "white" }}>
-                  새로만들기
-                </Text>
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>새로만들기</Text>
               </TouchableOpacity>
             </View>
             <View style={style.dhfms}>
-              <TouchableOpacity
-                style={{ backgroundColor: "blue" }}
-                onPress={() => navigation.navigate("CreateScreen")}
+            <TouchableOpacity
+          onPress={() => navigation.navigate("CreateScreen")}
+          style={{ borderRadius:10, width:"80%",height:"40%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
               >
-                <Text style={{ fontSize: "20", color: "white" }}>가져오기</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>가져오기</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -83,10 +80,10 @@ const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    height: "7%",
+    height: "1%",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "steelblue",
+    //backgroundColor: "steelblue",
   },
   dksshd: {
     width: "100%",
