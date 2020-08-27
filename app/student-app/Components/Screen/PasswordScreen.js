@@ -12,7 +12,7 @@ class PasswordScreen extends Component {
           onPress={() => navigation.navigate("CertficationScreen")}
           style={{ backgroundColor: "blue" }}
         >
-          <Text style={{ fontSize: "20", color: "white" }}>인증완료</Text>
+          <Text style={{ fontSize: 20, color: "white" }}>인증완료</Text>
         </TouchableOpacity>
       </View>
     );

@@ -25,7 +25,7 @@ class SigninScreen extends Component {
         onPress={() => navigation.navigate("EmailScreen")}
         style={{ borderRadius:10, width:"60%",height:"70%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>이메일인증</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>이메일인증</Text>
               </TouchableOpacity>
         </View>
         <View style={styles.footer}></View>
@@ -34,7 +34,7 @@ class SigninScreen extends Component {
         onPress={() => navigation.navigate("EmailScreen")}
         style={{ borderRadius:10, width:"90%",height:"65%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>다음</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>다음</Text>
               </TouchableOpacity>
         </View>
         

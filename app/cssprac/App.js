@@ -488,7 +488,7 @@ const styles = StyleSheet.create({
 
 });
 */
-
+/*
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
 
@@ -567,7 +567,7 @@ const styles = StyleSheet.create({
 
 
   });
-  
+*/
 
 /*
 import React, { Component } from "react";
@@ -674,7 +674,7 @@ const styles = StyleSheet.create({
 
   });
 */
-/*
+
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, TextInput, Image, TouchableOpacity } from "react-native";
 
@@ -707,34 +707,35 @@ class SigninScreen extends Component {
           
           <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5,}}></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"20%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>검증</Text>
               </TouchableOpacity>
           <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"20%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
               </TouchableOpacity>
           <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"20%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
               </TouchableOpacity>
           </View>
-        <View style={styles.gkgk}></View>
-        <View style={styles.gkdnl}>
+        <View style={styles.gkgk}>
         <TouchableOpacity
-                style={{ borderRadius:10, width:"60%",height:"30%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                style={{ borderRadius:10, width:"80%",height:"25%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>다음</Text>
               </TouchableOpacity>
+        </View>
+        <View style={styles.gkdnl}>
 
           </View>
           
@@ -756,23 +757,22 @@ const styles = StyleSheet.create({
     height: "9%",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "steelblue",
+    //backgroundColor: "steelblue",
   },
   heyhey: {
     width: "100%",
     height: "9%",
     justifyContent: "center",
     alignItems: "center",
-   // backgroundColor: "red",
+    //backgroundColor: "red",
   },
   
   content: {
-    
     width:"100%",
     height:"15%",
     justifyContent: "center",
     alignItems: "center",
-   // backgroundColor: "yellow",
+    //backgroundColor: "yellow",
   },
   
   
@@ -786,6 +786,8 @@ const styles = StyleSheet.create({
   gkgk: {
     width:"100%",
     height:"50%",
+    justifyContent:"center",
+    alignItems:"center",
     //backgroundColor:"green",
 
   },
@@ -793,9 +795,9 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor:"steelblue",
+    //backgroundColor:"steelblue",
   },
 
 
   });
-  */
+  

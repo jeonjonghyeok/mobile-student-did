@@ -28,11 +28,11 @@ class SigninScreen extends Component {
         </View>
         <View style={styles.dksshd}></View>
         <View style={styles.title}>
-          <Text style={{ fontSize: "30" }}>안양대학교 모바일 학생증</Text>
+          <Text style={{ fontSize: 30 }}>안양대학교 모바일 학생증</Text>
         </View>
         <View style={styles.rodrod}>
-          <Text style={{ fontSize: "20" }}>내 개인정보는 내가</Text>
-          <Text style={{ fontSize: "20" }}>쉽고, 편하게 인증하자</Text>
+          <Text style={{ fontSize: 20 }}>내 개인정보는 내가</Text>
+          <Text style={{ fontSize: 20 }}>쉽고, 편하게 인증하자</Text>
         </View>
 
         <View style={styles.content}>
@@ -42,7 +42,7 @@ class SigninScreen extends Component {
           />
         </View>
         <View style={styles.gkdnl}>
-          <Text style={{ fontSize: "40" }}> . . .</Text>
+          <Text style={{ fontSize: 40 }}> . . .</Text>
         </View>
 
         <View style={styles.footer}>
@@ -52,7 +52,7 @@ class SigninScreen extends Component {
             onPress={() => navigation.navigate("CreateScreen")}
             style={{ borderRadius:10, width:"80%",height:"40%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>새로만들기</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>새로만들기</Text>
               </TouchableOpacity>
             </View>
             <View style={style.dhfms}>
@@ -60,7 +60,7 @@ class SigninScreen extends Component {
           onPress={() => navigation.navigate("CreateScreen")}
           style={{ borderRadius:10, width:"80%",height:"40%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>가져오기</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>가져오기</Text>
               </TouchableOpacity>
             </View>
           </View>

@@ -92,9 +92,9 @@ class MainScreen extends Component {
         <View style={style.footer}>
         <TouchableOpacity
                 style={{ borderRadius:10, width:"60%",height:"30%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
-                //onPress={() => navigation.navigate("CreateScreen")}
+                onPress={() => navigation.navigate("PasswordScreen")}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>검증</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>검증</Text>
               </TouchableOpacity>
          
         </View>

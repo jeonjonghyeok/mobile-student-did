@@ -29,7 +29,7 @@ class SigninScreen extends Component {
           onPress={() => navigation.navigate("MainScreen")}
           style={{ borderRadius:10, width:"90%",height:"70%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>확인</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>확인</Text>
               </TouchableOpacity>
             </View>
         <View style={styles.gkdnl}>
