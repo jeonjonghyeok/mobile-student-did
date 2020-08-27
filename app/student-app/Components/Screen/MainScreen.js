@@ -79,21 +79,23 @@ class MainScreen extends Component {
           source={require('../../assets/logo1.jpg')}/>
         </View>
         <View style={style.content}>
-          <View style={styles.container2}>
-            <View style={styles.dhls}>
-              <Text>ddd</Text>
-
-            </View>
-            <View>
-            
-            </View>
-
-          </View>
           
-            
-        </View>
+              <Image
+              style={{height:'60%',width:'60%',resizeMode:'contain'}}
+              source={require('../../assets/gkgkgk.jpg')}/>
+              <Text style={{fontSize:20}}>이름: 이재성</Text>
+              <Text style={{fontSize:20}}>학번:201532028</Text>
+              <Text style={{fontSize:20}}>학과: 정보통신공학</Text>
+              </View>
+
+        
         <View style={style.footer}>
-         
+        <TouchableOpacity
+                style={{ borderRadius:10, width:"60%",height:"30%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                //onPress={() => navigation.navigate("CreateScreen")}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>검증</Text>
+              </TouchableOpacity>
          
         </View>
       </View>
@@ -107,30 +109,34 @@ const style = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor:"white",
   },
   header: {
     width:"100%",
     height:"30%",
-    backgroundColor:"green",
+    //backgroundColor:"green",
   },
   content: {
+    //flexDirection:'row',
     width:"100%",
     height:"40%",
-    backgroundColor:"red",
-    justifyContent:"center",
-    //alignItems:"center",
+    //backgroundColor:"red",
+    justifyContent:"space-between",
+    alignItems:"center",
+    
   },
   footer: {
     width:"100%",
     height:"20%",
     justifyContent:"center",
     alignItems:"center",
-    backgroundColor:"yellow",
+    //backgroundColor:"yellow",
   },
   
   
   tinylog: {},
 });
+/*
 const styles = StyleSheet.create({
   container2: {
     flex: 1,
@@ -149,3 +155,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+*/
