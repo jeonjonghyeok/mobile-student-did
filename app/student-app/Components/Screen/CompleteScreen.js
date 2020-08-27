@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
+import {TouchableOpacity, View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
 
 // <input type="text" placeholder="ID" />
 // <input type="text" placeholder="비밀번호" /> 
@@ -25,8 +25,12 @@ class SigninScreen extends Component {
           <Text style={{fontSize:25}}>생성 날짜 2020.00.00</Text>
         </View>
         <View style={styles.footer}>
-          <Text style={{fontSize:25}}>확인
-            </Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MainScreen")}
+          style={{ borderRadius:10, width:"90%",height:"70%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>다음</Text>
+              </TouchableOpacity>
             </View>
         <View style={styles.gkdnl}>
         </View>
@@ -45,7 +49,7 @@ const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    height: "30%",
+    height: "40%",
     justifyContent: "center",
     alignItems: "center",
     //backgroundColor: "steelblue",
