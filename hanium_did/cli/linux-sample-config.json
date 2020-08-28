@@ -1,5 +1,0 @@
-{
-  "loggerConfig": "logger.yml",
-  "plugins": "libnullpay.so:nullpay_init",
-  "taaAcceptanceMechanism": "Click Agreement"
-}
