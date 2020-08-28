@@ -1,8 +1,16 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, TextInput, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  TextInput,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 
 // <input type="text" placeholder="ID" />
-// <input type="text" placeholder="비밀번호" /> 
+// <input type="text" placeholder="비밀번호" />
 
 class SigninScreen extends Component {
   static navigationOptions = ({ screenProps }) => ({
@@ -18,50 +26,135 @@ class SigninScreen extends Component {
         <View style={styles.header}></View>
         <View style={styles.heyhey}></View>
         <View style={styles.content}>
-          <Text style={{fontSize:20}}>
-            이메일 주소를
-          </Text>
-          <Text style={{fontSize:20}}>
-            입력해 주세요.
-          </Text>
+          <Text style={{ fontSize: 20 }}>이메일 주소를</Text>
+          <Text style={{ fontSize: 20 }}>입력해 주세요.</Text>
         </View>
         <View style={styles.footer}>
-          <View style={{ justifyContent:'space-between', alignItems:'center',paddingBottom:10}}>
-          
-          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5,}}></TextInput>
-          <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
-                //onPress={() => navigation.navigate("CreateScreen")}
+          <View
+            style={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              paddingBottom: 10,
+            }}
+          >
+            <TextInput
+              style={{
+                borderColor: "#aaa",
+                width: "60%",
+                height: 35,
+                borderWidth: 1,
+                borderRadius: 5,
+                padding: 5,
+              }}
+            ></TextInput>
+            <TouchableOpacity
+              style={{
+                borderRadius: 10,
+                width: "20%",
+                height: "13%",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "gray",
+              }}
+              //onPress={() => navigation.navigate("CreateScreen")}
+            >
+              <Text
+                style={{
+                  justifyContent: "center",
+                  fontSize: 20,
+                  color: "white",
+                }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>검증</Text>
-              </TouchableOpacity>
-          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
-          <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
-                //onPress={() => navigation.navigate("CreateScreen")}
+                검증
+              </Text>
+            </TouchableOpacity>
+            <TextInput
+              style={{
+                borderColor: "#aaa",
+                width: "60%",
+                height: 35,
+                borderWidth: 1,
+                borderRadius: 5,
+                padding: 5,
+              }}
+            ></TextInput>
+            <TouchableOpacity
+              style={{
+                borderRadius: 10,
+                width: "20%",
+                height: "13%",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "gray",
+              }}
+              //onPress={() => navigation.navigate("CreateScreen")}
+            >
+              <Text
+                style={{
+                  justifyContent: "center",
+                  fontSize: 20,
+                  color: "white",
+                }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>인증확인</Text>
-              </TouchableOpacity>
-          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
-          <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
-                //onPress={() => navigation.navigate("CreateScreen")}
+                인증확인
+              </Text>
+            </TouchableOpacity>
+            <TextInput
+              style={{
+                borderColor: "#aaa",
+                width: "60%",
+                height: 35,
+                borderWidth: 1,
+                borderRadius: 5,
+                padding: 5,
+              }}
+            ></TextInput>
+            <TouchableOpacity
+              style={{
+                borderRadius: 10,
+                width: "20%",
+                height: "13%",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "gray",
+              }}
+              //onPress={() => navigation.navigate("CreateScreen")}
+            >
+              <Text
+                style={{
+                  justifyContent: "center",
+                  fontSize: 20,
+                  color: "white",
+                }}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>인증확인</Text>
-              </TouchableOpacity>
+                인증확인
+              </Text>
+            </TouchableOpacity>
           </View>
-        <View style={styles.gkgk}>
-        <TouchableOpacity
-                style={{ borderRadius:10, width:"80%",height:"25%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
-                onPress={() => navigation.navigate("MainScreen")}
-                >
-                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>다음</Text>
-              </TouchableOpacity>
-        </View>
-        <View style={styles.gkdnl}>
-
+          <View style={styles.gkgk}>
+            <TouchableOpacity
+              style={{
+                borderRadius: 10,
+                width: "80%",
+                height: "25%",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "steelblue",
+              }}
+              onPress={() => navigation.navigate("MainScreen")}
+            >
+              <Text
+                style={{
+                  justifyContent: "center",
+                  fontSize: 20,
+                  color: "white",
+                }}
+              >
+                다음
+              </Text>
+            </TouchableOpacity>
           </View>
-          
+          <View style={styles.gkdnl}></View>
         </View>
       </View>
     );
@@ -89,39 +182,36 @@ const styles = StyleSheet.create({
     alignItems: "center",
     //backgroundColor: "red",
   },
-  
+
   content: {
-    width:"100%",
-    height:"15%",
+    width: "100%",
+    height: "15%",
     justifyContent: "center",
     alignItems: "center",
     //backgroundColor: "yellow",
   },
-  
-  
-  footer: {
-    flex:1,
-    padding:10,
-    paddingRight:10,
-    paddingBottom:30,
 
+  footer: {
+    flex: 1,
+    padding: 10,
+    paddingRight: 10,
+    paddingBottom: 30,
   },
   gkgk: {
-    width:"100%",
-    height:"50%",
-    justifyContent:"center",
-    alignItems:"center",
+    width: "100%",
+    height: "50%",
+    justifyContent: "center",
+    alignItems: "center",
     //backgroundColor:"green",
-
   },
   gkdnl: {
-    flex:1,
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     //backgroundColor:"steelblue",
   },
-  });
-  
+});
+
 /*
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, TextInput } from "react-native";
