@@ -1,3 +1,4 @@
+/*
 import React, { Component } from "react";
 import {TouchableOpacity, View, Text, StyleSheet, Button, TextInput, Image } from "react-native";
 
@@ -80,8 +81,8 @@ const styles = StyleSheet.create({
 
 
   });
-  
-/*
+  */
+
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 // import UpperNavigator from "../Navigator/UpperNavigator";
@@ -114,4 +115,3 @@ const style = StyleSheet.create({
     justifyContent: "center",
   },
 });
-*/
