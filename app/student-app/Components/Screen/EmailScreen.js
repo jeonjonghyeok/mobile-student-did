@@ -28,27 +28,32 @@ class SigninScreen extends Component {
         <View style={styles.footer}>
           <View style={{ justifyContent:'space-between', alignItems:'center',paddingBottom:10}}>
           <View style={{flexDirection:"row"}}>
-          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5}}></TextInput>
+          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5}}
+          placeholder='이메일 주소'>
+            
+          </TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                style={{ borderRadius:5, width:"25%",height:"50%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>검증</Text>
               </TouchableOpacity>
               </View>
               <View style={{flexDirection:"row"}}>
-          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
+          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}
+          placeholder='인증번호'></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                style={{ borderRadius:5, width:"25%",height:"50%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
               </TouchableOpacity>
               </View>
               <View style={{flexDirection:"row"}}>
-          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
+          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}
+          placeholder='이메일 재전송'></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                style={{ borderRadius:5, width:"25%",height:"50%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
@@ -82,14 +87,14 @@ const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    height: "9%",
+    //height: "9%",
     justifyContent: "center",
     alignItems: "center",
     //backgroundColor: "steelblue",
   },
   heyhey: {
     width: "100%",
-    height: "9%",
+    //height: "9%",
     justifyContent: "center",
     alignItems: "center",
     //backgroundColor: "red",
@@ -97,7 +102,7 @@ const styles = StyleSheet.create({
   
   content: {
     width:"100%",
-    height:"15%",
+    height:"10%",
     justifyContent: "center",
     alignItems: "center",
     //backgroundColor: "yellow",
@@ -105,7 +110,9 @@ const styles = StyleSheet.create({
   
   
   footer: {
-    flex:1,
+    //flex:1,
+    width:"100%",
+    height:"60%",
     padding:10,
     paddingRight:10,
     paddingVertical:50,
@@ -114,14 +121,14 @@ const styles = StyleSheet.create({
   },
   gkgk: {
     width:"100%",
-    height:"20%",
+    height:"25%",
     justifyContent:"center",
     alignItems:"center",
     //backgroundColor:"green",
 
   },
   gkdnl: {
-    flex:1,
+    //flex:1,
     justifyContent: "center",
     alignItems: "center",
     
