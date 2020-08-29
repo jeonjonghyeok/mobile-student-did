@@ -36,7 +36,7 @@ class SigninScreen extends Component {
                 style={{ borderRadius:5, width:"25%",height:"50%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>검증</Text>
+                <Text style={{ justifyContent:"center" ,fontSize:20, color: "white" }}>검증</Text>
               </TouchableOpacity>
               </View>
               <View style={{flexDirection:"row"}}>
@@ -46,7 +46,7 @@ class SigninScreen extends Component {
                 style={{ borderRadius:5, width:"25%",height:"50%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
+                <Text style={{ justifyContent:"center" ,fontSize:20, color: "white" }}>인증확인</Text>
               </TouchableOpacity>
               </View>
               <View style={{flexDirection:"row"}}>
@@ -56,7 +56,7 @@ class SigninScreen extends Component {
                 style={{ borderRadius:5, width:"25%",height:"50%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
+                <Text style={{ justifyContent:"center" ,fontSize:20, color: "white" }}>인증확인</Text>
               </TouchableOpacity>
               </View>
           </View>
@@ -65,7 +65,7 @@ class SigninScreen extends Component {
                 style={{ borderRadius:10, width:"90%",height:"60%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
                 onPress={() => navigation.navigate("MainScreen")}
               >
-                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>다음</Text>
+                <Text style={{ justifyContent:"center" ,fontSize: 20, color: "white" }}>다음</Text>
               </TouchableOpacity>
         </View>
         <View style={styles.gkdnl}>
