@@ -704,28 +704,33 @@ class SigninScreen extends Component {
         </View>
         <View style={styles.footer}>
           <View style={{ justifyContent:'space-between', alignItems:'center',paddingBottom:10}}>
-          
-          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5,}}></TextInput>
+          <View style={{flexDirection:"row"}}>
+          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5}}></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>검증</Text>
               </TouchableOpacity>
+              </View>
+              <View style={{flexDirection:"row"}}>
           <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
               </TouchableOpacity>
+              </View>
+              <View style={{flexDirection:"row"}}>
           <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
           <TouchableOpacity
-                style={{ borderRadius:10, width:"20%",height:"13%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
               </TouchableOpacity>
+              </View>
           </View>
         <View style={styles.gkgk}>
         <TouchableOpacity
@@ -780,6 +785,7 @@ const styles = StyleSheet.create({
     flex:1,
     padding:10,
     paddingRight:10,
+    paddingVertical:50,
     paddingBottom:30,
 
   },

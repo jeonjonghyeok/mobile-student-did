@@ -1,4 +1,138 @@
 import React, { Component } from "react";
+import { View, Text, StyleSheet, Button, TextInput, Image, TouchableOpacity } from "react-native";
+
+// <input type="text" placeholder="ID" />
+// <input type="text" placeholder="비밀번호" /> 
+
+class SigninScreen extends Component {
+  static navigationOptions = ({ screenProps }) => ({
+    title: "회원가입",
+    headerRight: (
+      <Button onPress={() => screenProps.openDraw()} title="OPEN" color="red" />
+    ),
+  });
+  render() {
+    const { navigation } = this.props;
+    return (
+      <View style={styles.container}>
+        <View style={styles.header}></View>
+        <View style={styles.heyhey}></View>
+        <View style={styles.content}>
+          <Text style={{fontSize:20}}>
+            이메일 주소를
+          </Text>
+          <Text style={{fontSize:20}}>
+            입력해 주세요.
+          </Text>
+        </View>
+        <View style={styles.footer}>
+          <View style={{ justifyContent:'space-between', alignItems:'center',paddingBottom:10}}>
+          <View style={{flexDirection:"row"}}>
+          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5}}></TextInput>
+          <TouchableOpacity
+                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                //onPress={() => navigation.navigate("CreateScreen")}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>검증</Text>
+              </TouchableOpacity>
+              </View>
+              <View style={{flexDirection:"row"}}>
+          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
+          <TouchableOpacity
+                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                //onPress={() => navigation.navigate("CreateScreen")}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
+              </TouchableOpacity>
+              </View>
+              <View style={{flexDirection:"row"}}>
+          <TextInput style={{borderColor:'#aaa', width:'60%', height:35, borderWidth: 1, borderRadius: 5, padding:5 }}></TextInput>
+          <TouchableOpacity
+                style={{ borderRadius:10, width:"25%",height:"45%", justifyContent:"center", alignItems:"center", backgroundColor: "gray" }}
+                //onPress={() => navigation.navigate("CreateScreen")}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>인증확인</Text>
+              </TouchableOpacity>
+              </View>
+          </View>
+        <View style={styles.gkgk}>
+        <TouchableOpacity
+                style={{ borderRadius:10, width:"90%",height:"60%", justifyContent:"center", alignItems:"center", backgroundColor: "steelblue" }}
+                onPress={() => navigation.navigate("MainScreen")}
+              >
+                <Text style={{ justifyContent:"center" ,fontSize: "20", color: "white" }}>다음</Text>
+              </TouchableOpacity>
+        </View>
+        <View style={styles.gkdnl}>
+
+          </View>
+          
+        </View>
+      </View>
+    );
+  }
+}
+export default SigninScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    backgroundColor: "white",
+  },
+  header: {
+    width: "100%",
+    height: "9%",
+    justifyContent: "center",
+    alignItems: "center",
+    //backgroundColor: "steelblue",
+  },
+  heyhey: {
+    width: "100%",
+    height: "9%",
+    justifyContent: "center",
+    alignItems: "center",
+    //backgroundColor: "red",
+  },
+  
+  content: {
+    width:"100%",
+    height:"15%",
+    justifyContent: "center",
+    alignItems: "center",
+    //backgroundColor: "yellow",
+  },
+  
+  
+  footer: {
+    flex:1,
+    padding:10,
+    paddingRight:10,
+    paddingVertical:50,
+    paddingBottom:30,
+
+  },
+  gkgk: {
+    width:"100%",
+    height:"20%",
+    justifyContent:"center",
+    alignItems:"center",
+    //backgroundColor:"green",
+
+  },
+  gkdnl: {
+    flex:1,
+    justifyContent: "center",
+    alignItems: "center",
+    
+    //backgroundColor:"steelblue",
+  },
+
+
+  });
+
+/*
+import React, { Component } from "react";
 import {
   View,
   Text,
@@ -211,7 +345,7 @@ const styles = StyleSheet.create({
     //backgroundColor:"steelblue",
   },
 });
-
+*/
 /*
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, TextInput } from "react-native";
