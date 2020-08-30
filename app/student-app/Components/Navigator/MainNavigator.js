@@ -82,6 +82,13 @@ function First({ navigation }) {
         name="PasswordScreen"
         options={{
           title: "검증화면",
+        }}
+        component={PasswordScreen}
+      />
+      <Stack.Screen
+        name="CertficationScreen"
+        options={{
+          title: "검증완료",
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
               <Ionicons
@@ -93,11 +100,6 @@ function First({ navigation }) {
             </TouchableOpacity>
           ),
         }}
-        component={PasswordScreen}
-      />
-      <Stack.Screen
-        name="CertficationScreen"
-        options={{ title: "검증완료" }}
         component={CertficationScreen}
       />
     </Stack.Navigator>
@@ -140,7 +142,19 @@ function MainStack({ navigation }) {
       />
       <Stack.Screen
         name="CertficationScreen"
-        options={{ title: "검증완료" }}
+        options={{
+          title: "검증완료",
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <Ionicons
+                name="ios-menu"
+                size={24}
+                color="white"
+                style={{ marginLeft: 10 }}
+              />
+            </TouchableOpacity>
+          ),
+        }}
         component={CertficationScreen}
       />
     </Stack.Navigator>
@@ -178,7 +192,7 @@ function CustomDrawerContent({ navigation }) {
           )}
           label="검증하기"
           onPress={() => {
-            navigation.navigate("CertficationScreen");
+            navigation.navigate("PasswordScreen");
           }}
         />
         <DrawerItem
@@ -200,7 +214,7 @@ function MyDrawerNavigator() {
     <Drawer.Navigator
       initialRouteName={First}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
-      // edgeWidth={0}
+      edgeWidth={0}
     >
       <Drawer.Screen
         options={{ drawerLabel: () => null }}
