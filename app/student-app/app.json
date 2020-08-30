@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/ayu.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/ayu.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
