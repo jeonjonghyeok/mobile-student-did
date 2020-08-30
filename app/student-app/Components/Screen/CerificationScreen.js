@@ -37,7 +37,7 @@ class MainScreen extends Component {
         </View>
         <View style={style.content}>
           <QRCode
-            value="http://awesome.link.qr"
+            value="이재성님의 안양대학교 학생 인증이 완료되었습니다."
             size={200}
             logoBackgroundColor="transparent"
           />

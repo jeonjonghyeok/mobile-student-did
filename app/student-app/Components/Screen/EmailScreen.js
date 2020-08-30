@@ -153,7 +153,7 @@ class SigninScreen extends Component {
                 alignItems: "center",
                 backgroundColor: "steelblue",
               }}
-              onPress={() => navigation.navigate("MainScreen")}
+              onPress={() => navigation.navigate("CompleteScreen")}
             >
               <Text
                 style={{

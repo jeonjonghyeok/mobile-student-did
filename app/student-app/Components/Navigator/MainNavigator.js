@@ -88,7 +88,7 @@ function First({ navigation }) {
       <Stack.Screen
         name="CertficationScreen"
         options={{
-          title: "검증완료",
+          title: "검증",
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
               <Ionicons

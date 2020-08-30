@@ -2,26 +2,23 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 // import UpperNavigator from "../Navigator/UpperNavigator";
 
-class CompleteScreen extends Component {
+class PasswordScreen extends Component {
   render() {
     const { navigation } = this.props;
     return (
       <View style={style.container}>
-        <Text>DID기반 모바일 학생증</Text>
-        <Text>생성 완료</Text>
-        <Text>DID: "did:certification:123456789abcdefghi"</Text>
-        <Text>생성 날짜 2020.08.31</Text>
+        <Text>비밀번호 인증화면</Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate("MainScreen")}
+          onPress={() => navigation.navigate("CertficationScreen")}
           style={{ backgroundColor: "blue" }}
         >
-          <Text style={{ fontSize: 20, color: "white" }}>메인화면으로</Text>
+          <Text style={{ fontSize: 20, color: "white" }}>인증완료</Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
-export default CompleteScreen;
+export default PasswordScreen;
 
 const style = StyleSheet.create({
   container: {
