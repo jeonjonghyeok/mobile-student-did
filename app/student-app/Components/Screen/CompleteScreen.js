@@ -7,13 +7,23 @@ class CompleteScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={style.container}>
-        <Text>DID기반 모바일 학생증</Text>
-        <Text>생성 완료</Text>
-        <Text>DID: "did:certification:123456789abcdefghi"</Text>
-        <Text>생성 날짜 2020.08.31</Text>
+        <View style={style.header}>
+        <Text style={{fontSize:25}}>DID기반 모바일 학생증</Text>
+        <Text style={{fontSize:25}}>생성 완료</Text>
+        </View>
+        <View style={style.content}>
+        <Text style={{fontSize:18, justifyContent:"center", alignItems:"center"}}>DID: "did:certification:123456789abcdefghi"</Text>
+        <Text style={{fontSize:18, justifyContent:"center", alignItems:"center"}}>생성 날짜 2020.08.31</Text>
+          
+        </View>
         <TouchableOpacity
-          onPress={() => navigation.navigate("MainScreen")}
-          style={{ backgroundColor: "blue" }}
+                    onPress={() => navigation.navigate("MainScreen")}
+                    style={{borderRadius: 10,
+                      width: "70%",
+                      height: "8%",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "steelblue",}}
         >
           <Text style={{ fontSize: 20, color: "white" }}>메인화면으로</Text>
         </TouchableOpacity>
@@ -29,4 +39,18 @@ const style = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  header: {
+    width:"100%",
+    height:"30%",
+    //justifyContent:"center",
+    alignItems:"center",
+    //backgroundColor:"red",
+  },
+  content: {
+    width:"100%",
+    height:"40%",
+    //justifyContent:"center",
+    alignItems:"center",
+    //backgroundColor:"yellow",
+  }
 });
