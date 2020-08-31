@@ -24,7 +24,7 @@ class MainScreen extends Component {
         <View style={style.content}>
           <Image
             style={{ height: "60%", width: "60%", resizeMode: "contain" }}
-            source={require("../../assets/gkgkgk.jpg")}
+            source={require("../../assets/dsdljs.jpg")}
           />
           <Text style={{ fontSize: 20 }}>이름: 이재성</Text>
           <Text style={{ fontSize: 20 }}>학번:201532028</Text>
