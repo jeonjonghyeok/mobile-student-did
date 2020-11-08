@@ -17,9 +17,7 @@ class Loading extends Component {
         </View>
         <View style={styles.case3}>
           <Text style={styles.small2}>개발진들</Text>
-          <Text style={styles.small}>
-            전종혁,박현준,김경동,이재성,송소연,우길제
-          </Text>
+          <Text style={styles.small}>전종혁,박현준,김경동,이재성,송소연</Text>
         </View>
       </View>
       // <View style={styles.container}>
