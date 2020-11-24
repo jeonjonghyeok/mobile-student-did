@@ -50,5 +50,5 @@ const styles = StyleSheet.create({
   },
   title: { paddingTop: 70, fontSize: 30, alignContent: "center" },
   small2: { justifyContent: "flex-end", paddingTop: 50, paddingLeft: 310 },
-  small: { justifyContent: "flex-end", paddingLeft: 100 },
+  small: { justifyContent: "flex-end", paddingLeft: 150 },
 });

@@ -109,7 +109,7 @@ class SigninScreen extends Component {
               </TouchableOpacity>
             </View>
             <View style={{ flexDirection: "row" }}>
-              <TextInput
+              {/* <TextInput
                 style={{
                   borderColor: "#aaa",
                   width: "60%",
@@ -129,7 +129,6 @@ class SigninScreen extends Component {
                   alignItems: "center",
                   backgroundColor: "gray",
                 }}
-                //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text
                   style={{
@@ -140,7 +139,7 @@ class SigninScreen extends Component {
                 >
                   인증확인
                 </Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </View>
           </View>
           <View style={styles.gkgk}>
