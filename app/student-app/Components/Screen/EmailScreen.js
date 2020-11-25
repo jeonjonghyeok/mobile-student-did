@@ -20,6 +20,19 @@ class SigninScreen extends Component {
       <Button onPress={() => screenProps.openDraw()} title="OPEN" color="red" />
     ),
   });
+  constructor(props) {
+    super(props);
+    this.state = { password: "3159", text: "", inputText: "" };
+  }
+  submitBtn = () => {
+    this.setState({ text: this.state.inputText });
+    if (this.state.text == this.state.password) {
+      Alert.alert("인증완료", "인증이 완료되었습니다.");
+    } else {
+      Alert.alert("인증불가", "비밀번호가다릅니다..");
+    }
+  };
+
   render() {
     const { navigation } = this.props;
     return (
@@ -82,7 +95,10 @@ class SigninScreen extends Component {
                   borderRadius: 5,
                   padding: 5,
                 }}
-                placeholder="인증번호"
+                onChangeText={(text) => {
+                  this.setState({ inputText: text });
+                }}
+                placeholder="인증번호."
               ></TextInput>
               <TouchableOpacity
                 style={{
@@ -93,9 +109,12 @@ class SigninScreen extends Component {
                   alignItems: "center",
                   backgroundColor: "gray",
                 }}
-                onPress={() => {
-                  Alert.alert("인증완료", "인증이 완료되었습니다.");
-                }}
+                onPress={this.submitBtn}
+                // onPress={() => {
+                //   if(this.state.)
+
+                //   Alert.alert("인증완료", "인증이 완료되었습니다.");
+                // }}
               >
                 <Text
                   style={{
@@ -107,39 +126,7 @@ class SigninScreen extends Component {
                   인증확인
                 </Text>
               </TouchableOpacity>
-            </View>
-            <View style={{ flexDirection: "row" }}>
-              {/* <TextInput
-                style={{
-                  borderColor: "#aaa",
-                  width: "60%",
-                  height: 35,
-                  borderWidth: 1,
-                  borderRadius: 5,
-                  padding: 5,
-                }}
-                placeholder="이메일 재전송"
-              ></TextInput>
-              <TouchableOpacity
-                style={{
-                  borderRadius: 5,
-                  width: "25%",
-                  height: "50%",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "gray",
-                }}
-              >
-                <Text
-                  style={{
-                    justifyContent: "center",
-                    fontSize: 20,
-                    color: "white",
-                  }}
-                >
-                  인증확인
-                </Text>
-              </TouchableOpacity> */}
+              <Text>{this.state.text}</Text>
             </View>
           </View>
           <View style={styles.gkgk}>
