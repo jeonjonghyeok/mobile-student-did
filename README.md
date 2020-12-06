@@ -9,11 +9,11 @@
 
 
 ## 사용언어 및 도구(툴)
-![file_type_pug_icon_130225](https://user-images.githubusercontent.com/48907339/101274975-9f9f7c80-37e5-11eb-900b-155cf441c721.png)
-![file_type_js_official_icon_130509](https://user-images.githubusercontent.com/48907339/101194729-b6d55180-36a1-11eb-88b0-f3c91df05e55.png)![express_original_wordmark_logo_icon_146528](https://user-images.githubusercontent.com/48907339/101193677-4a0d8780-36a0-11eb-8abd-4704056f4f48.png)![nodejs_plain_wordmark_logo_icon_146410](https://user-images.githubusercontent.com/48907339/101194757-c05eb980-36a1-11eb-8f4e-0c571ab197f0.png)![file_type_vscode_icon_130084](https://user-images.githubusercontent.com/48907339/101195939-770f6980-36a3-11eb-9056-6369e19696ff.png)![mysql_plain_wordmark_logo_icon_146415 (4)](https://user-images.githubusercontent.com/48907339/101274991-bc3bb480-37e5-11eb-8817-91d93497d7de.png)
+
+![NicePng_react-logo-png_2224770 (1)](https://user-images.githubusercontent.com/48907339/101288898-6514fe80-383c-11eb-9b7f-ddba33ab4c87.png)![expo_logo_icon_145293](https://user-images.githubusercontent.com/48907339/101288899-66dec200-383c-11eb-9b24-bb79115b18f9.png)![android_icon-icons com_62719](https://user-images.githubusercontent.com/48907339/101288841-110a1a00-383c-11eb-93c3-70df7ce20061.png)![apple_icon-icons com_62745](https://user-images.githubusercontent.com/48907339/101288845-12d3dd80-383c-11eb-9cc6-d5814cd347de.png)![file_type_js_official_icon_130509](https://user-images.githubusercontent.com/48907339/101194729-b6d55180-36a1-11eb-88b0-f3c91df05e55.png)![express_original_wordmark_logo_icon_146528](https://user-images.githubusercontent.com/48907339/101193677-4a0d8780-36a0-11eb-8abd-4704056f4f48.png)![nodejs_plain_wordmark_logo_icon_146410](https://user-images.githubusercontent.com/48907339/101194757-c05eb980-36a1-11eb-8f4e-0c571ab197f0.png)![file_type_vscode_icon_130084](https://user-images.githubusercontent.com/48907339/101195939-770f6980-36a3-11eb-9056-6369e19696ff.png)![python_18894](https://user-images.githubusercontent.com/48907339/101288951-94c40680-383c-11eb-8e8b-cf94f2eb71b1.png)
 
 ### 개발
-- Android 와 IOS 둘다 지원하기위해서 React-native를 이용해서 크로스 플랫폼 어플리케이션을 구현하도록 하였습니다.
+- Android 와 IOS 둘다 지원하기위해서 React-native(EXPO)를 이용해서 크로스 플랫폼 어플리케이션을 구현하도록 하였습니다.
 - Hyper-ledger indy 를 사용해 DID 네트워크를 구축하였습니다.
 - 어플리케이션과 블록체인 부분은 연동은 아직 안된 상태입니다.(연동 예정)
 
