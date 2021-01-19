@@ -72,6 +72,12 @@ class SigninScreen extends Component {
                   alignItems: "center",
                   backgroundColor: "gray",
                 }}
+                onPress={() => {
+                  Alert.alert(
+                    "이메일 전송완료",
+                    "이메일 전송이 완료되었습니다."
+                  );
+                }}
                 //onPress={() => navigation.navigate("CreateScreen")}
               >
                 <Text
@@ -111,7 +117,6 @@ class SigninScreen extends Component {
                 }}
                 onPress={this.submitBtn}
                 // onPress={() => {
-                //   if(this.state.)
 
                 //   Alert.alert("인증완료", "인증이 완료되었습니다.");
                 // }}
@@ -126,7 +131,6 @@ class SigninScreen extends Component {
                   인증확인
                 </Text>
               </TouchableOpacity>
-              <Text>{this.state.text}</Text>
             </View>
           </View>
           <View style={styles.gkgk}>
