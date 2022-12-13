@@ -19,7 +19,7 @@
     "expo-image-picker": "~8.3.0",
     "expo-sharing": "~8.2.1",
     "expo-status-bar": "^1.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "moment": "^2.29.1",
     "native-base": "^2.13.13",
     "nodemailer": "^6.4.16",
